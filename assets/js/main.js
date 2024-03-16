@@ -22,7 +22,7 @@ if(navClose) {
 })
 
 
-/* ============================== sidebar active link ========================*/
+/* ============================ SCROLL SECTION ACTIVE LINK ========================= */
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav_link');
@@ -219,28 +219,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }); 
 
 });
-/* ============================ SCROLL SECTION ACTIVE LINK ========================= */
-// get all sections that have an id defined
-const sections = documents.querySelectorAll("section[id]");
 
-//add an event listner listening for scroll
-window.addEventListener("scroll", naviHighlighter);
 
-function naviHighlighter() {
-    // get current scroll position
-    let scrollY = window.pageYOffset;
-    // now we loop through sections to get height, top and id values for each
+/* ================= send email =============================*/
+document.addEventListener("DOMContentLoaded", function () {
+    function sendMail() {
+         let params = {
+            name : document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject : document.getElementById("subject").value,
+            message: document.getElementById("message").value
+         }
 
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop = 50,
-        sectionId = current.getAttribute("ïd");
+         emailjs.send("service_datexoa","template_id8bxhb", params).then(alert("Submitted Successfully!"))
+    }
+})
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add("active-link")
-        }
-        else {
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove("active-link")
-        }
-    });
-}
+

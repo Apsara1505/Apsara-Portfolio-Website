@@ -25,6 +25,18 @@
 
     <!--===================MAIN JS=================================-->
     <script src="assets/js/main.js"></script>
+
+    <!-- ====================== email js============================-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "VHZGXFDVfJYsr6Lyc",
+          });
+      })();
+    </script>
   </head>
 
   <body>
@@ -1014,7 +1026,7 @@
               <div class="contact_card">
                 <i class="uil uil-envelope-alt contact_card-icon"></i>
                 <h3 class="contact_card-title">Email</h3>
-                <span class="contact_card-data"> apsaradesilva1505@gmail.com </span>
+                <span class="contact_card-data">  </span>
                 <span class="contact_button">
                   Write me <i class="uil uil-arrow-right contact_button-icon"></i>
                 </span>
@@ -1035,32 +1047,30 @@
           <div class="contact_content">
               <form action="" class="contact_form">
                 <div class="input_container">
-                  <input type="text" class="input">
+                  <input type="text" class="input" id="name">
                   <label for="">Name</label>
                   <span>Name</span>
                 </div>
 
                 <div class="input_container">
-                  <input type="email" class="input">
+                  <input type="text" class="input" id="email">
                   <label for="">Email</label>
                   <span>Email</span>
                 </div>
 
                 <div class="input_container">
-                  <input type="Phone Number" class="input">
-                  <label for="">Phone Number</label>
+                  <input type="text" class="input" id="subject">
+                  <label for="">Subject</label>
                   <span>Phone Number</span>
                 </div>
 
-               
-
                 <div class="input_container textarea">
-                  <textarea name="" id="" class="input"></textarea>
+                  <textarea name="" id="message" class="input"></textarea>
                   <label for="">Type a message</label>
                   <span>Type a message</span>
                 </div>
 
-                <button type="submit" class="btn">
+                <button type="submit" onclick="sendMail()" class="btn" id="submit">
                   Send Message
                   <i class="uil uil-navigator button_icon"></i>
                 </button>
@@ -1127,5 +1137,32 @@
 
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
+
+    <!-- =====================  firebase ==========-->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAdBpTNczTOFA0hdCE9UUuitXyqy0Ar0vg",
+          authDomain: "portfolio-apsara.firebaseapp.com",
+          projectId: "portfolio-apsara",
+          storageBucket: "portfolio-apsara.appspot.com",
+          messagingSenderId: "114472663124",
+          appId: "1:114472663124:web:bbad01083c0cf6415615c1",
+          measurementId: "G-BMRC5H28V2"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+    </script>
+
   </body>
 </html>
