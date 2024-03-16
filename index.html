@@ -16,7 +16,7 @@
 
     <!--===================SWIPER CSS=================================-->
     <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+          href="assets/css/swiper-bundle.min.css"
 />
 
     <!--===================MAIN CSS=================================-->
@@ -41,19 +41,19 @@
           <div class="menu">
             <ul class="nav_list">
               <li class="nav_item">
-                <a href="#home" class="nav_link">Home</a>
+                <a href="#home" class="nav_link active-link">Home</a>
               </li>
               <li class="nav_item">
                 <a href="#about" class="nav_link">About</a>
+              </li>
+              <li class="nav_item">
+                <a href="#qualification" class="nav_link">Qualification</a>
               </li>
               <li class="nav_item">
                 <a href="#skills" class="nav_link">Skills</a>
               </li>
               <li class="nav_item">
                 <a href="#work" class="nav_link">Work</a>
-              </li>
-              <li class="nav_item">
-                <a href="#services" class="nav_link">Services</a>
               </li>
               <li class="nav_item">
                 <a href="#contact" class="nav_link">Contact</a>
@@ -75,7 +75,7 @@
       <section class="home" id="home">
         <div class="home_container container grid">
           <div class="home_social">
-            <span class="home_social-follow"></span>
+            <span class="home_social-follow">Follow Me</span>
             <div class="home_social-links">
               <a href="" target="_blank" class="home_social-link">
                 <i class="uil uil-linkedin-alt"></i>
@@ -86,14 +86,15 @@
               <a href="" target="_blank" class="home_social-link">
                 <i class="uil uil-behance-alt"></i>
               </a>
-              <a href="" target="_blank" class="home_social-link">
+              <!-- <a href="" target="_blank" class="home_social-link">
                 <i class="uil uil-instagram"></i>
               </a>
               <a href="" target="_blank" class="home_social-link">
                 <i class="uil uil-twitter-alt"></i>
-              </a>
+              </a> -->
             </div>
           </div>
+
           <div class="home_content grid">
             <img
               src="assets/img/Group 1.png"
@@ -101,26 +102,20 @@
               class="home_img"
             />
 
-            <div class="home_detail">
-              <h1 class="home_title">Hello, I am</h1>
-              <h1 class="home_title">Apsara De Silva</h1>
-              <h3 class="home_subtitle">Trainee - Full Stack Developer 💻🚀</h3>
+            <div class="home_data">
+              <h1 class="home_title">Hi, I am Apsara De Silva</h1>
+              <h3 class="home_subtitle">Trainee - Full Stack Developer</h3>
               <p class="home_description">
                 As a Trainee Full Stack Developer fueled by a profound passion
                 for software development, I actively pursue challenges to
-                enhance my skills and gain valuable experience. Eager to
-                contribute innovative solutions, I am committed to a continuous
-                learning journey in the dynamic field of Full Stack development.
-                Ready to embrace new opportunities and make a meaningful impact.
-                <br />
-                #TraineeDeveloper #FullStackPassion
+                enhance my skills and gain valuable experience. 
               </p>
               <button class="btn">
                 Contact Me <i class="uil uil-message button_icon"></i>
               </button>
             </div>
           </div>
-          <!-- <div class="my_info">
+          <div class="my_info">
             <div class="info_item">
               <i class="uil uil-facebook-messenger-alt info_icon"></i>
               <div>
@@ -142,7 +137,7 @@
                 <span class="info_subtitle">ad1234</span>
               </div>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
       <!--===== About =====-->
@@ -190,10 +185,10 @@
         </div>
       </section>
       <!--===== Qualification =====-->
-      <section class="qualofication section">
+      <section class="qualification section" id="qualification">
         <h2 data-heading="My Intro" class="section_title">Qualifications</h2>
 
-        <div class="qualofication_container container grid">
+        <div class="qualification_container container grid">
           <div class="education">
             <h3 class="qualification_title">
               <i class="uil uil-graduation-cap"></i> Education
@@ -661,7 +656,7 @@
             </div>
           </div>
 
-          <div class="work_card mix design">
+          <!-- <div class="work_card mix design">
             <img
               src="assets/img/jay.png"
               alt=""
@@ -686,7 +681,7 @@
                 <li>View - <span>Frontend</span></li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
           <div class="work_card mix design">
             <img
@@ -754,7 +749,7 @@
       </div>
 
       <!--===== Services =====-->
-      <section class="services section" id="services">
+      <!-- <section class="services section" id="services">
         <h2 data-heading="Services" class="section_title">What I Offer</h2>
 
         <div class="services_container container grid">
@@ -766,9 +761,9 @@
                 Designing
               </h3>
             </div>
-            <button class="services_button">
+            <span class="services_button">
               View More <i class="uil uil-arrow-right services_button-icon"></i>
-            </button>
+            </span>
 
             <div class="services_modal">
               <div class="services_modal-content">
@@ -808,9 +803,9 @@
                 Designing
               </h3>
             </div>
-            <button class="services_button">
+            <span class="services_button">
               View More <i class="uil uil-arrow-right services_button-icon"></i>
-            </button>
+            </span>
 
             <div class="services_modal">
               <div class="services_modal-content">
@@ -850,9 +845,9 @@
                 Designing
               </h3>
             </div>
-            <button class="services_button">
+            <span class="services_button">
               View More <i class="uil uil-arrow-right services_button-icon"></i>
-            </button>
+            </span>
 
             <div class="services_modal">
               <div class="services_modal-content">
@@ -884,9 +879,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!--===== Testimonials =====-->
-      <section class="testimonials section">
+      <!-- <section class="testimonials section">
         <h2 data-heading="Clients Feedback" class="section_title">
           Testimonials
         </h2>
@@ -944,7 +939,6 @@
                     <span class="testimonial_profile-detail">Managing Director - ADL , Sri Lanka</span>
                   </div>
                 </div>
-
             </div>
 
             <div class="testimonial_card swiper-slide">
@@ -962,7 +956,6 @@
                     <span class="testimonial_profile-detail">Managing Director - ADL , Sri Lanka</span>
                   </div>
                 </div>
-
             </div>
 
             <div class="testimonial_card swiper-slide">
@@ -980,8 +973,7 @@
                     <span class="testimonial_profile-detail">Managing Director - ADL , Sri Lanka</span>
                   </div>
                 </div>
-
-            </div>
+              </div>
 
             <div class="testimonial_card swiper-slide">
               <div class="testimonial_quote">
@@ -998,14 +990,11 @@
                     <span class="testimonial_profile-detail">Managing Director - ADL , Sri Lanka</span>
                   </div>
                 </div>
-
             </div>
-
-
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </section>
+      </section> -->
       <!--===== Contact =====-->
       <section class="contact section" id="contact">
         <h2 data-heading="Get in touch" class="section_title">Contact Me</h2>
