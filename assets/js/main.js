@@ -245,12 +245,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll(".nav_link");
     const navClose = document.querySelector(".nav_close");
 
-    // Add event listener to each nav link
     navLinks.forEach(function(navLink) {
         navLink.addEventListener("click", function() {
-            // Trigger click event on nav close
-            navClose.click();
+           navClose.click();
         });
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactHomeButton = document.getElementById("home_contact-btn");
+    const contactSection = document.getElementById("contact");
+
+    contactHomeButton.addEventListener("click", function() {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+});
+
+})

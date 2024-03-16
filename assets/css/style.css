@@ -280,7 +280,7 @@ input {
 
 /*===== Home Section =====*/
 .home{
-    background: url(../img/ashblk.png);
+    background: url(../img/portfolio_4.png);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -395,9 +395,7 @@ input {
      display: inline-flex;
      align-items: center;
      column-gap: .5rem;
-     /* background-color: var(--skin-color); */
-     /* background-color: #1560BD; #1E90FF 4682B4*/
-     background-color: #1560BD;
+     background-color: var(--skin-color);
      padding: .75rem 1.4rem;
      border-radius: .50rem;
      font-weight: var(--font-medium);
