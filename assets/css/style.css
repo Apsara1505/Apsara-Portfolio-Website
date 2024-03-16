@@ -6,7 +6,7 @@
     --hue-color: 242;
 
     /* HSL Color Mode */
-    --skin-color: hsl(342, 92%, 46%);
+    --skin-color: #1560BD;
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
     --body-color: hsl(var(--hue-color), 19%, 5%);
@@ -176,7 +176,7 @@ input {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #1560BD;
+    background-color: var(--skin-color);
     text-align: center;
     margin: auto;
 }
@@ -264,7 +264,7 @@ input {
     content: '';
     width: 6px;
     height: 6px;
-    background-color: #1560BD;
+    background-color: var(--skin-color);
     border-radius: 50%;
     bottom: 1.8rem;
     left: 0;
@@ -1296,6 +1296,7 @@ textarea.input {
 
      .nav_toggle {
         display: flex;
+        z-index: 9999;
      }
 
      .main{
@@ -1487,8 +1488,7 @@ textarea.input {
      }
 
      .home_social-follow {
-        font-size: var(--smaller-font-size);
-        transform: rotate(90deg);
+        display: none;
      }
 
      .home_social-links {
@@ -1500,7 +1500,6 @@ textarea.input {
         font-size: var(--normal-font-size) ;
      }
 
-     
      .my_info {
         display: none;
      }

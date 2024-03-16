@@ -222,17 +222,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* ================= send email =============================*/
-document.addEventListener("DOMContentLoaded", function () {
-    function sendMail() {
-         let params = {
-            name : document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            subject : document.getElementById("subject").value,
-            message: document.getElementById("message").value
-         }
-
-         emailjs.send("service_datexoa","template_id8bxhb", params).then(alert("Submitted Successfully!"))
+function sendMail() {
+    let parms = {
+        name : document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject : document.getElementById("subject").value,
+        message: document.getElementById("message").value
     }
-})
 
+    emailjs.send("service_datexoa", "template_id8bxhb", parms).then(function(response) {
+        console.log("Email sent successfully:", response);
+        alert("Submitted Successfully!");
+    }, function(error) {
+        console.error("Email sending failed:", error);
+        alert("Submission failed. Please try again later.");
+    });
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".nav_toggle");
+    const navLinks = document.querySelectorAll(".nav_link");
+    const navClose = document.querySelector(".nav_close");
+
+    // Add event listener to each nav link
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener("click", function() {
+            // Trigger click event on nav close
+            navClose.click();
+        });
+    });
+});
 
