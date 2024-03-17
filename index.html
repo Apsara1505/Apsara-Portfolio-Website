@@ -27,17 +27,8 @@
     <!--===================MAIN JS=================================-->
     <script src="assets/js/main.js"></script>
 
-    <!-- ====================== email js============================-->
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function(){
-          emailjs.init({
-            publicKey: "VHZGXFDVfJYsr6Lyc",
-          });
-      })();
-    </script>
+    <!-- ====================== smtpjs============================-->
+   
   </head>
 
   <body>
@@ -202,6 +193,15 @@
                 <p class="timeline_text">Saegis Campus, Nugegoda</p>
                 <span class="timeline_date">
                   <i class="uil uil-calendar-alt"></i> 2020 - 2023
+                </span>
+              </div>
+
+              <div class="timeline_item">
+                <div class="circle_dot"></div>
+                <h3 class="timeline_title">Diploma in Accounting & Finance</h3>
+                <p class="timeline_text">Passed Finalist - AAT Sri Lanka</p>
+                <span class="timeline_date">
+                  <i class="uil uil-calendar-alt"></i> 2019 - 2020
                 </span>
               </div>
 
@@ -1055,11 +1055,6 @@
           </div>
         </div>
       </section>
-
-       <!-- ======== SCROLL UP ================ -->
-       <button id="scrollUpBtn" class="scrollUp-Btn" onclick="scrollToTop()">
-        <i class='bx bx-up-arrow-alt'></i>
-        </button>
       
       <!--===== FOOTER =====-->
       <footer class="footer" id="footer">
@@ -1109,8 +1104,11 @@
       </footer>
     </main>
 
-    <!--========== SCROLL UP ==========-->
 
+    <!--========== SCROLL UP ==========-->
+       <a href="#" id="scrollUpBtn" class="scrollUp-Btn" onclick="scrollToTop()">
+        <i class='bx bx-up-arrow-alt'></i>
+       </a>
     <!--========== MIXITUP FILTER ==========-->
     <script src="assets/js/mixitup.min.js"></script>
 

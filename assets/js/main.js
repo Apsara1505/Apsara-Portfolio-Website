@@ -27,22 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav_link');
 
-    // Function to set the initial active link
     function setInitialActiveLink() {
         navLinks.forEach(link => {
             link.classList.remove('active-link');
         });
-        // Add 'active-link' class to the Home link
+    
         document.querySelector('.nav_link[href="#home"]').classList.add('active-link');
     }
 
-    // Call the function to set the initial active link
     setInitialActiveLink();
 
     window.addEventListener('scroll', function() {
         let current = '';
 
-        // Iterate over each section to determine which one is in view
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
@@ -52,12 +49,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Remove the 'active-link' class from all navigation links
         navLinks.forEach(link => {
             link.classList.remove('active-link');
         });
 
-        // Add the 'active-link' class to the navigation link corresponding to the current section
         const currentNavLink = document.querySelector('.nav_link[href="#' + current + '"]');
         if (currentNavLink) {
             currentNavLink.classList.add('active-link');
@@ -78,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tab.addEventListener("click", () => {
             const target = document.querySelector(tab.dataset.target);
 
-            // Add a check for null
+
             if (!target) {
                 console.error("Target element not found");
                 return;
@@ -130,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const portfolioPopup = document.querySelector(".portfolio_popup");
     const portfolioCloseBtn = document.querySelector(".portfolio_popup-close");
 
-    // Event listener for clicking on work buttons
     document.querySelectorAll(".work_button").forEach(button => {
         button.addEventListener("click", function() {
             const workCard = this.closest(".work_card");
@@ -222,24 +216,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* ================= send email =============================*/
-function sendMail() {
-    let parms = {
-        name : document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        subject : document.getElementById("subject").value,
-        message: document.getElementById("message").value
-    }
-
-    emailjs.send("service_datexoa", "template_id8bxhb", parms).then(function(response) {
-        console.log("Email sent successfully:", response);
-        alert("Submitted Successfully!");
-    }, function(error) {
-        console.error("Email sending failed:", error);
-        alert("Submission failed. Please try again later.");
-    });
-}
 
 
+/* ==============================  ============================*/
 document.addEventListener("DOMContentLoaded", function() {
     const navToggle = document.querySelector(".nav_toggle");
     const navLinks = document.querySelectorAll(".nav_link");
@@ -265,7 +244,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /* ==================== scroll up button ================== */
-// Function to scroll to the top of the page smoothly
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -273,26 +251,23 @@ function scrollToTop() {
     });
 }
 
-// Function to toggle the visibility of the scroll-up button based on the scroll position
 function toggleScrollButton() {
     var scrollButton = document.getElementById("scrollUpBtn");
-    var footerSection = document.getElementById("footer");
+    var aboutSection = document.getElementById("about");
 
-    // Check if the contact section exists and is in view
-    if (footerSection) {
-        var footerSectionRect = footerSection.getBoundingClientRect();
+    if (aboutSection) {
+        var aboutSectionRect = aboutSection.getBoundingClientRect();
 
-        // Show the scroll-up button if the contact section is in view
-        if (footerSectionRect.top < window.innerHeight && footerSectionRect.bottom >= 0) {
-            scrollButton.style.bottom = "20px"; // Adjust to show the button
+        if (aboutSectionRect.top <= 0) {
+            scrollButton.style.bottom = "20px"; 
         } else {
-            scrollButton.style.bottom = "-50px"; // Adjust to hide the button
+            scrollButton.style.bottom = "-50px"; 
         }
     }
 }
 
-// Add event listeners for page load and scroll events
 window.addEventListener("load", toggleScrollButton);
 window.addEventListener("scroll", toggleScrollButton);
+
 
 
