@@ -262,3 +262,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 })
+
+
+/* ==================== scroll up button ================== */
+// Function to scroll to the top of the page smoothly
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// Function to toggle the visibility of the scroll-up button based on the scroll position
+function toggleScrollButton() {
+    var scrollButton = document.getElementById("scrollUpBtn");
+    var footerSection = document.getElementById("footer");
+
+    // Check if the contact section exists and is in view
+    if (footerSection) {
+        var footerSectionRect = footerSection.getBoundingClientRect();
+
+        // Show the scroll-up button if the contact section is in view
+        if (footerSectionRect.top < window.innerHeight && footerSectionRect.bottom >= 0) {
+            scrollButton.style.bottom = "20px"; // Adjust to show the button
+        } else {
+            scrollButton.style.bottom = "-50px"; // Adjust to hide the button
+        }
+    }
+}
+
+// Add event listeners for page load and scroll events
+window.addEventListener("load", toggleScrollButton);
+window.addEventListener("scroll", toggleScrollButton);
+
+
